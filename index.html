@@ -4,15 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title>KEYS · Flavia Gaglio</title>
-    <!-- Font Google: Playfair Display per titoli, Lato per testo -->
+    <!-- Font Google -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             background: linear-gradient(145deg, #fae5d7 0%, #f7d9c4 100%);
             font-family: 'Lato', sans-serif;
@@ -23,12 +19,10 @@
             padding: 1.5rem;
             animation: sfondoRespiro 8s infinite alternate ease-in-out;
         }
-
         @keyframes sfondoRespiro {
             0% { background: linear-gradient(145deg, #fae5d7, #f7d9c4); }
             100% { background: linear-gradient(145deg, #f5d0b8, #f0c4a8); }
         }
-
         .container {
             max-width: 1000px;
             width: 100%;
@@ -38,55 +32,39 @@
             padding: 2.5rem 2rem;
             box-shadow: 0 30px 50px rgba(180, 100, 50, 0.25), 0 10px 20px rgba(0,0,0,0.1);
             border: 2px solid rgba(255, 255, 255, 0.6);
-            transition: all 0.4s;
             animation: contenitoreAppare 1s ease-out;
         }
-
         @keyframes contenitoreAppare {
             from { opacity: 0; transform: translateY(30px) scale(0.98); }
             to { opacity: 1; transform: translateY(0) scale(1); }
         }
-
-        .hero-title {
-            text-align: center;
-            margin-bottom: 1.8rem;
-        }
-
+        .hero-title { text-align: center; margin-bottom: 1.8rem; }
         h1 {
             font-family: 'Playfair Display', serif;
             font-size: 4rem;
             font-weight: 900;
             color: #8b5a2b;
             text-shadow: 2px 2px 0 #f0d5b0, 4px 4px 0 rgba(150, 80, 30, 0.2);
-            letter-spacing: -0.5px;
-            line-height: 1.1;
             animation: titoloOscillazione 5s infinite alternate;
         }
-
         @keyframes titoloOscillazione {
             from { transform: rotate(-0.5deg); }
             to { transform: rotate(0.5deg); }
         }
-
         .byline {
             font-family: 'Playfair Display', serif;
             font-size: 1.3rem;
-            font-weight: 400;
             color: #b07d44;
             font-style: italic;
             border-bottom: 2px dotted #c9a77b;
             display: inline-block;
             padding-bottom: 0.3rem;
-            margin-bottom: 0.8rem;
         }
-
         .sub {
             text-align: center;
             font-size: 1.2rem;
             color: #9c6e42;
             margin-bottom: 2.2rem;
-            font-weight: 300;
-            letter-spacing: 1px;
             background: rgba(255, 235, 215, 0.6);
             padding: 0.6rem 1.5rem;
             border-radius: 50px;
@@ -94,9 +72,7 @@
             width: auto;
             margin-left: auto;
             margin-right: auto;
-            box-shadow: 0 4px 8px rgba(150, 80, 30, 0.1);
         }
-
         .selector-area {
             background: rgba(250, 235, 215, 0.7);
             backdrop-filter: blur(5px);
@@ -105,13 +81,7 @@
             margin-bottom: 2.5rem;
             border: 2px solid rgba(200, 140, 80, 0.3);
             box-shadow: 0 15px 25px rgba(140, 80, 30, 0.2);
-            transition: box-shadow 0.3s;
         }
-
-        .selector-area:hover {
-            box-shadow: 0 20px 35px rgba(160, 90, 40, 0.3);
-        }
-
         .selector-label {
             font-size: 0.9rem;
             text-transform: uppercase;
@@ -120,9 +90,7 @@
             margin-bottom: 1.5rem;
             font-weight: 700;
             text-align: center;
-            font-family: 'Lato', sans-serif;
         }
-
         .note-grid {
             display: flex;
             flex-wrap: wrap;
@@ -130,46 +98,36 @@
             justify-content: center;
             margin-bottom: 2rem;
         }
-
         .note-btn {
             background: #fff7ed;
             border: 2px solid #dbb88c;
             color: #7a4e2e;
             width: 65px;
             height: 65px;
-            border-radius: 30px 30px 30px 30px;
+            border-radius: 30px;
             font-weight: 700;
             font-size: 1.4rem;
             font-family: 'Playfair Display', serif;
             cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            box-shadow: 0 8px 0 #b28b5c, 0 10px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 8px 0 #b28b5c, 0 10px 15px rgba(0,0,0,0.1);
-            -webkit-tap-highlight-color: transparent;
         }
-
         @media (min-width: 480px) {
-            .note-btn {
-                width: 75px;
-                height: 75px;
-                font-size: 1.6rem;
-            }
+            .note-btn { width: 75px; height: 75px; font-size: 1.6rem; }
         }
-
         .note-btn:active {
             transform: translateY(5px);
             box-shadow: 0 3px 0 #b28b5c, 0 8px 12px rgba(0,0,0,0.1);
         }
-
         .note-btn.selected {
             background: #e7b183;
             border-color: #a5662b;
             color: #2d1e0f;
             box-shadow: 0 8px 0 #7a4e2e, 0 10px 20px rgba(200, 120, 30, 0.4);
         }
-
         .mode-selector {
             display: flex;
             justify-content: center;
@@ -177,7 +135,6 @@
             margin-bottom: 2.5rem;
             flex-wrap: wrap;
         }
-
         .mode-btn {
             background: #fff7ed;
             border: 2px solid #dbb88c;
@@ -186,13 +143,10 @@
             border-radius: 40px;
             font-weight: 700;
             font-size: 1.2rem;
-            font-family: 'Lato', sans-serif;
             cursor: pointer;
-            transition: all 0.3s;
             box-shadow: 0 5px 0 #b28b5c, 0 8px 15px rgba(0,0,0,0.1);
-            -webkit-tap-highlight-color: transparent;
+            transition: all 0.3s;
         }
-
         .mode-btn.selected {
             background: #e7b183;
             border-color: #a5662b;
@@ -200,7 +154,6 @@
             transform: translateY(2px);
             box-shadow: 0 3px 0 #7a4e2e, 0 8px 15px rgba(200, 120, 30, 0.3);
         }
-
         .calculate-btn {
             background: #c9a077;
             border: none;
@@ -211,7 +164,6 @@
             font-size: 1.3rem;
             font-family: 'Lato', sans-serif;
             cursor: pointer;
-            transition: all 0.3s;
             letter-spacing: 2px;
             width: 100%;
             max-width: 400px;
@@ -219,15 +171,13 @@
             display: block;
             text-transform: uppercase;
             box-shadow: 0 12px 0 #7a4e2e, 0 10px 25px rgba(100, 50, 10, 0.4);
-            -webkit-tap-highlight-color: transparent;
             border: 2px solid #ffe7cf;
+            transition: all 0.3s;
         }
-
         .calculate-btn:active {
             transform: translateY(6px);
             box-shadow: 0 6px 0 #7a4e2e, 0 10px 20px rgba(100, 50, 10, 0.3);
         }
-
         .result-card {
             background: rgba(255, 240, 225, 0.9);
             backdrop-filter: blur(4px);
@@ -239,12 +189,10 @@
             animation: risultatoAppare 0.6s ease-out;
             text-align: center;
         }
-
         @keyframes risultatoAppare {
             from { opacity: 0; transform: scale(0.9); }
             to { opacity: 1; transform: scale(1); }
         }
-
         .key-name {
             font-size: 3.2rem;
             font-family: 'Playfair Display', serif;
@@ -253,14 +201,12 @@
             margin-bottom: 0.8rem;
             text-shadow: 2px 2px 0 #eaceb0;
         }
-
         .accidentals-count {
             font-size: 1.5rem;
             color: #b07d44;
             margin-bottom: 1.5rem;
             font-style: italic;
         }
-
         .accidentals-list {
             font-size: 2.5rem;
             font-family: 'Playfair Display', serif;
@@ -271,21 +217,13 @@
             border: 3px solid #d4a373;
             box-shadow: inset 0 2px 8px #e7b183;
         }
-
         .accidental-note {
             display: inline-block;
             margin: 0 0.4rem;
             font-weight: 700;
         }
-
-        .sharp {
-            color: #bc6c25;
-        }
-
-        .flat {
-            color: #a47148;
-        }
-
+        .sharp { color: #bc6c25; }
+        .flat { color: #a47148; }
         footer {
             margin-top: 2.8rem;
             text-align: center;
@@ -302,7 +240,6 @@
             <h1>🎼 KEYS</h1>
             <div class="byline">by Flavia Gaglio</div>
         </div>
-        
 
         <div class="selector-area">
             <div class="selector-label">fondamentale</div>
@@ -322,33 +259,36 @@
             <div class="accidentals-count" id="accidentalsCount"></div>
             <div class="accidentals-list" id="accidentalsList"></div>
         </div>
-
-        
     </div>
 
     <script>
         (function() {
-            // ---------- Note in italiano (con alterazioni) ----------
+            // ---------- Note in italiano (12 semitoni) ----------
             const NOTE_ITALIANE = ["Do", "Do#", "Re", "Re#", "Mi", "Fa", "Fa#", "Sol", "Sol#", "La", "La#", "Si"];
 
-            // Tonalità maggiori con diesis (ordine circolo quinte)
-            const MAGGIORI_DIESIS = ["Do", "Sol", "Re", "La", "Mi", "Si", "Fa#", "Do#"];
-            // Tonalità maggiori con bemolli
-            const MAGGIORI_BEMOLLI = ["Do", "Fa", "Sib", "Mib", "Lab", "Reb", "Solb", "Dob"];
+            // ---------- Circolo delle quinte per tonalità maggiori ----------
+            // Indice 0 = Do (0 diesis), 1 = Sol (1 diesis), 2 = Re (2 diesis), 3 = La (3 diesis),
+            // 4 = Mi (4 diesis), 5 = Si (5 diesis), 6 = Fa# (6 diesis), 7 = Do# (7 diesis)
+            const CICLO_DIESIS = ["Do", "Sol", "Re", "La", "Mi", "Si", "Fa#", "Do#"];
+            // Indice 0 = Do (0 bemolli), 1 = Fa (1 bemolle), 2 = Sib (2 bemolli), 3 = Mib (3 bemolli),
+            // 4 = Lab (4 bemolli), 5 = Reb (5 bemolli), 6 = Solb (6 bemolli), 7 = Dob (7 bemolli)
+            const CICLO_BEMOLLI = ["Do", "Fa", "Sib", "Mib", "Lab", "Reb", "Solb", "Dob"];
 
-            // Ordine delle alterazioni in italiano
+            // Ordine delle alterazioni
             const ORDINE_DIESIS = ["Fa#", "Do#", "Sol#", "Re#", "La#", "Mi#", "Si#"];
             const ORDINE_BEMOLLI = ["Sib", "Mib", "Lab", "Reb", "Solb", "Dob", "Fab"];
 
-            // Mappa per ottenere l'indice della nota a partire dal nome (per i calcoli)
-            function indiceNota(nome) {
-                return NOTE_ITALIANE.indexOf(nome);
-            }
-
-            // Relativo minore: 3 semitoni sotto
-            function relativoMinore(indice) {
-                return (indice - 3 + 12) % 12;
-            }
+            // Mappa delle enarmonie per note non standard (es. Re# → Mib)
+            const ENARMONIA = {
+                "Re#": "Mib",
+                "La#": "Sib",
+                "Sol#": "Lab",
+                "Do#": "Do#",  // standard
+                "Fa#": "Fa#",  // standard
+                "Mi#": "Fa",    // Mi# è enarmonico di Fa (1 bemolle, ma Fa ha 1 bemolle? No, Fa ha 1 bemolle? Fa maggiore ha Sib, quindi 1 bemolle)
+                "Si#": "Do",    // Si# è enarmonico di Do (0 alterazioni)
+                "Fab": "Mi",    // Fab è enarmonico di Mi (0 alterazioni? No, Mi maggiore ha 4 diesis, ma Fab è l'enarmonico di Mi? Attenzione: Fab = Mi, ma Mi maggiore ha diesis, quindi non è una semplice sostituzione. Meglio limitarsi alle enarmonie più comuni.)
+            };
 
             // ---------- Stato ----------
             let selectedNoteIndex = 0; // Do
@@ -390,45 +330,130 @@
                 isMajor = false;
             });
 
-            // ---------- Funzione che restituisce armatura ----------
+            // ---------- Funzione che restituisce armatura (corretta) ----------
             function getArmatura(indice, maggiore) {
-                const nomeNota = NOTE_ITALIANE[indice];
+                let nomeNota = NOTE_ITALIANE[indice];
+                let isEnarmonica = false;
+                let notaOriginale = nomeNota;
 
+                // Controlla se la nota è nei cicli standard
                 if (maggiore) {
-                    // Controlla se è nei diesis
-                    const idxDiesis = MAGGIORI_DIESIS.indexOf(nomeNota);
-                    if (idxDiesis !== -1) {
-                        const count = idxDiesis;
-                        const alterazioni = ORDINE_DIESIS.slice(0, count);
-                        return { count, alterazioni, tipo: 'diesis' };
+                    // Tonalità maggiore
+                    if (CICLO_DIESIS.includes(nomeNota)) {
+                        const count = CICLO_DIESIS.indexOf(nomeNota);
+                        return {
+                            count,
+                            alterazioni: ORDINE_DIESIS.slice(0, count),
+                            tipo: 'diesis',
+                            nota: nomeNota,
+                            isEnarmonica: false
+                        };
                     }
-                    // Controlla bemolli
-                    const idxBemolle = MAGGIORI_BEMOLLI.indexOf(nomeNota);
-                    if (idxBemolle !== -1) {
-                        const count = idxBemolle;
-                        const alterazioni = ORDINE_BEMOLLI.slice(0, count);
-                        return { count, alterazioni, tipo: 'bemolle' };
+                    if (CICLO_BEMOLLI.includes(nomeNota)) {
+                        const count = CICLO_BEMOLLI.indexOf(nomeNota);
+                        return {
+                            count,
+                            alterazioni: ORDINE_BEMOLLI.slice(0, count),
+                            tipo: 'bemolle',
+                            nota: nomeNota,
+                            isEnarmonica: false
+                        };
                     }
-                    // Teoricamente non dovrebbe succedere (enarmonie)
-                    return { count: 0, alterazioni: [], tipo: 'nessuna' };
+                    // Se non è standard, cerca enarmonia
+                    if (ENARMONIA[nomeNota]) {
+                        const enarmonica = ENARMONIA[nomeNota];
+                        if (CICLO_DIESIS.includes(enarmonica)) {
+                            const count = CICLO_DIESIS.indexOf(enarmonica);
+                            return {
+                                count,
+                                alterazioni: ORDINE_DIESIS.slice(0, count),
+                                tipo: 'diesis',
+                                nota: enarmonica,
+                                isEnarmonica: true,
+                                originale: nomeNota
+                            };
+                        }
+                        if (CICLO_BEMOLLI.includes(enarmonica)) {
+                            const count = CICLO_BEMOLLI.indexOf(enarmonica);
+                            return {
+                                count,
+                                alterazioni: ORDINE_BEMOLLI.slice(0, count),
+                                tipo: 'bemolle',
+                                nota: enarmonica,
+                                isEnarmonica: true,
+                                originale: nomeNota
+                            };
+                        }
+                    }
+                    // Tonalità sconosciuta
+                    return {
+                        count: null,
+                        alterazioni: [],
+                        tipo: 'sconosciuta',
+                        nota: nomeNota,
+                        isEnarmonica: false
+                    };
                 } else {
-                    // Modo minore: usa il relativo maggiore
+                    // Tonalità minore: si usa il relativo maggiore (3 semitoni sopra)
                     const relMagIndice = (indice + 3) % 12;
                     const nomeRelMag = NOTE_ITALIANE[relMagIndice];
-
-                    const idxDiesis = MAGGIORI_DIESIS.indexOf(nomeRelMag);
-                    if (idxDiesis !== -1) {
-                        const count = idxDiesis;
-                        const alterazioni = ORDINE_DIESIS.slice(0, count);
-                        return { count, alterazioni, tipo: 'diesis' };
+                    // Chiamata ricorsiva? No, usiamo la stessa logica ma sul relativo maggiore
+                    if (CICLO_DIESIS.includes(nomeRelMag)) {
+                        const count = CICLO_DIESIS.indexOf(nomeRelMag);
+                        return {
+                            count,
+                            alterazioni: ORDINE_DIESIS.slice(0, count),
+                            tipo: 'diesis',
+                            nota: nomeNota,
+                            isEnarmonica: false,
+                            relMag: nomeRelMag
+                        };
                     }
-                    const idxBemolle = MAGGIORI_BEMOLLI.indexOf(nomeRelMag);
-                    if (idxBemolle !== -1) {
-                        const count = idxBemolle;
-                        const alterazioni = ORDINE_BEMOLLI.slice(0, count);
-                        return { count, alterazioni, tipo: 'bemolle' };
+                    if (CICLO_BEMOLLI.includes(nomeRelMag)) {
+                        const count = CICLO_BEMOLLI.indexOf(nomeRelMag);
+                        return {
+                            count,
+                            alterazioni: ORDINE_BEMOLLI.slice(0, count),
+                            tipo: 'bemolle',
+                            nota: nomeNota,
+                            isEnarmonica: false,
+                            relMag: nomeRelMag
+                        };
                     }
-                    return { count: 0, alterazioni: [], tipo: 'nessuna' };
+                    // Se il relativo maggiore non è standard, cerca enarmonia
+                    if (ENARMONIA[nomeRelMag]) {
+                        const enarmonica = ENARMONIA[nomeRelMag];
+                        if (CICLO_DIESIS.includes(enarmonica)) {
+                            const count = CICLO_DIESIS.indexOf(enarmonica);
+                            return {
+                                count,
+                                alterazioni: ORDINE_DIESIS.slice(0, count),
+                                tipo: 'diesis',
+                                nota: nomeNota,
+                                isEnarmonica: true,
+                                originale: nomeRelMag,
+                                enarmonicaUsata: enarmonica
+                            };
+                        }
+                        if (CICLO_BEMOLLI.includes(enarmonica)) {
+                            const count = CICLO_BEMOLLI.indexOf(enarmonica);
+                            return {
+                                count,
+                                alterazioni: ORDINE_BEMOLLI.slice(0, count),
+                                tipo: 'bemolle',
+                                nota: nomeNota,
+                                isEnarmonica: true,
+                                originale: nomeRelMag,
+                                enarmonicaUsata: enarmonica
+                            };
+                        }
+                    }
+                    return {
+                        count: null,
+                        alterazioni: [],
+                        tipo: 'sconosciuta',
+                        nota: nomeNota
+                    };
                 }
             }
 
@@ -436,25 +461,37 @@
             function renderArmatura() {
                 const nomeNota = NOTE_ITALIANE[selectedNoteIndex];
                 const modo = isMajor ? 'maggiore' : 'minore';
-                const { count, alterazioni, tipo } = getArmatura(selectedNoteIndex, isMajor);
+                const armatura = getArmatura(selectedNoteIndex, isMajor);
 
-                keyNameEl.textContent = `${nomeNota} ${modo}`;
-
-                if (count === 0) {
-                    accidentalsCountEl.textContent = 'nessuna alterazione in chiave';
-                    accidentalsListEl.innerHTML = '♮';
+                if (armatura.count === null) {
+                    keyNameEl.textContent = `${nomeNota} ${modo}`;
+                    accidentalsCountEl.textContent = 'tonalità non standard';
+                    accidentalsListEl.innerHTML = '?';
                 } else {
-                    const tipoLabel = tipo === 'diesis' ? 'diesis' : 'bemolli';
-                    accidentalsCountEl.textContent = `${count} ${tipoLabel}`;
+                    let nomeVisualizzato = nomeNota;
+                    if (armatura.isEnarmonica) {
+                        if (isMajor) {
+                            nomeVisualizzato = `${nomeNota} (enarmonica: ${armatura.nota} ${modo})`;
+                        } else {
+                            nomeVisualizzato = `${nomeNota} ${modo} (rel. maggiore: ${armatura.relMag || armatura.enarmonicaUsata})`;
+                        }
+                    }
+                    keyNameEl.textContent = nomeVisualizzato;
 
-                    let html = '';
-                    alterazioni.forEach(nota => {
-                        const classe = tipo === 'diesis' ? 'sharp' : 'flat';
-                        html += `<span class="accidental-note ${classe}">${nota}</span>`;
-                    });
-                    accidentalsListEl.innerHTML = html;
+                    if (armatura.count === 0) {
+                        accidentalsCountEl.textContent = 'nessuna alterazione in chiave';
+                        accidentalsListEl.innerHTML = '♮';
+                    } else {
+                        const tipoLabel = armatura.tipo === 'diesis' ? 'diesis' : 'bemolli';
+                        accidentalsCountEl.textContent = `${armatura.count} ${tipoLabel}`;
+                        let html = '';
+                        armatura.alterazioni.forEach(nota => {
+                            const classe = armatura.tipo === 'diesis' ? 'sharp' : 'flat';
+                            html += `<span class="accidental-note ${classe}">${nota}</span>`;
+                        });
+                        accidentalsListEl.innerHTML = html;
+                    }
                 }
-
                 resultDiv.style.display = 'block';
             }
 
