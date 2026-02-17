@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <strong>Keys</strong> è un piccolo strumento web per comprendere quante e quali alterazioni (diesis o bemolli) ha una tonalità.<br>
+  <strong>Keys</strong> è un piccolo strumento web per comprendere quante e quali alterazioni ha una tonalità.<br>
   
 </p>
 
@@ -20,12 +20,13 @@
 
 ## ✨ Cos'è
 
-Ti sei mai chiesto: "Quanti diesis ha Mi maggiore?" o "Quali sono le alterazioni di Fa minore?"  
-**Keys** risponde subito. Seleziona la tonalità che ti interessa e ottieni:
+**KEYS** si basa sul **circolo delle quinte**. Basta selezionare la tonalità che ti interessa e avrai:
 
 - Il nome completo della tonalità (es. *Sol# minore*)
 - Il numero di alterazioni (es. *5 diesis*)
-- L'elenco delle note alterate (es. *Fa# Do# Sol# Re# La#*)
+- L'elenco delle note alterate nell'ordine standard (es. *Fa# Do# Sol# Re# La#*)
+
+Il tool gestisce anche le **tonalità enarmoniche** (es. Re# viene interpretato come Mib) e ti avvisa quando viene applicata un'enarmonia.
 
 ---
 
@@ -40,7 +41,7 @@ Ti sei mai chiesto: "Quanti diesis ha Mi maggiore?" o "Quali sono le alterazioni
 ---
 
 
-## 🧠 Come funziona (in breve)
+## 🧠 Come funziona
 
 L'applicazione si basa sul **circolo delle quinte**:
 
