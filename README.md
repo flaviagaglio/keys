@@ -1,4 +1,4 @@
-<h1 align="center">🎼 Keys </h1>
+<h1 align="center">🎼 KEYS </h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/versione-1.0.0-bc6c25?style=for-the-badge" />
