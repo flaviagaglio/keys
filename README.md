@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <strong>Keys</strong> è uno strumento semplice e immediato per trovare l'armatura di chiave di qualsiasi tonalità maggiore o minore.  
+  <strong>Keys</strong> è uno strumento semplice e immediato per trovare l'armatura di chiave di qualsiasi tonalità.  
 </p>
 
 <p align="center">
