@@ -31,9 +31,8 @@
 ## 🎯 Come si usa
 
 1. Scegli la **nota fondamentale** tra i pulsanti.
-2. Seleziona il **modo**: `maggiore` o `minore`.
-3. Clicca su **✨ scopri l'armatura ✨**.
-4. Leggi il risultato: numero e tipo di alterazioni, e l'elenco delle note alterate.
+2. Clicca su **✨ scopri l'armatura ✨**.
+3. Leggi il risultato
 
 
 ---
